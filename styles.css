@@ -112,7 +112,6 @@ header {
 }
 .tecnology__tecnologia:nth-child(4) .tecnologia:nth-child(1) .tecnologia__icono {
 	background: var(--javascript);
-	border-radius: 50%;
 }
 @media (min-width: 801px) {
 	.tecnology__tecnologia {
