@@ -30,9 +30,12 @@ h1 {
 	font-size: 3rem;
 }
 h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 h3 {
+	font-size: 2rem;
+}
+h4{
 	font-size: 1.5rem;
 }
 span {
@@ -139,7 +142,7 @@ header {
 */
 .proyectos {
 	background-color: var(--segundo);
-	width: 90%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	margin: auto;
@@ -147,7 +150,7 @@ header {
 	padding: 1rem;
 }
 .proyectos__proyecto {
-	width: 90%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	margin: auto;
@@ -175,3 +178,11 @@ header {
 		flex-direction: row;
 	}
 }
+/*------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+							footer
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+*/
