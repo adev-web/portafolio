@@ -1,3 +1,5 @@
+/** @format */
+
 :root {
 	--blanco: #ffffff;
 	--negro: #000000;
@@ -9,15 +11,12 @@
 	--css: #1e5ca6;
 	--javascript: #f58233;
 	--typescript: #1e49a6;
-	--fuenteprimaria: "Staatliches", cursive;
-	--fuentesecundaria: "Carter One", cursive;
+	--fuenteprimaria: 'Staatliches', cursive;
+	--fuentesecundaria: 'Carter One', cursive;
 }
+
 body {
-	display: grid;
-	grid-template-columns: 1fr;
 	font-family: var(--fuenteprimaria);
-	align-items: center;
-	justify-content: center;
 }
 h1,
 h2,
@@ -30,12 +29,9 @@ h1 {
 	font-size: 3rem;
 }
 h2 {
-	font-size: 2.5rem;
-}
-h3 {
 	font-size: 2rem;
 }
-h4{
+h3 {
 	font-size: 1.5rem;
 }
 span {
@@ -59,7 +55,8 @@ img {
 --------------------------------------------------------------------
 */
 .shadow {
-	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+	box-shadow: 0px 10px 13px -7px #000000,
+		5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -71,7 +68,10 @@ img {
 */
 header {
 	background: var(--primero);
+	display: flex;
+	justify-content: center;
 }
+
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -107,15 +107,20 @@ header {
 .tecnologia__icono:hover {
 	transform: scale(1.25);
 }
-.tecnology__tecnologia:nth-child(2) .tecnologia:nth-child(1) .tecnologia__icono {
+.tecnology__tecnologia:nth-child(2)
+	.tecnologia:nth-child(1)
+	.tecnologia__icono {
 	background: var(--html);
 }
-.tecnology__tecnologia:nth-child(2) .tecnologia:nth-child(2) .tecnologia__icono {
+.tecnology__tecnologia:nth-child(2)
+	.tecnologia:nth-child(2)
+	.tecnologia__icono {
 	background: var(--css);
 }
-.tecnology__tecnologia:nth-child(4) .tecnologia:nth-child(1) .tecnologia__icono {
+.tecnology__tecnologia:nth-child(4)
+	.tecnologia:nth-child(1)
+	.tecnologia__icono {
 	background: var(--javascript);
-	border-radius: 50%;
 }
 @media (min-width: 801px) {
 	.tecnology__tecnologia {
@@ -142,7 +147,7 @@ header {
 */
 .proyectos {
 	background-color: var(--segundo);
-	width: 80%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	margin: auto;
@@ -150,7 +155,7 @@ header {
 	padding: 1rem;
 }
 .proyectos__proyecto {
-	width: 80%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	margin: auto;
@@ -171,6 +176,10 @@ header {
 		flex-direction: column;
 		border-radius: 1rem;
 		padding: 2rem;
+		transition: 0.35s;
+	}
+	.proyectos:hover {
+		transform: scale(1.05);
 	}
 	.proyectos__proyecto {
 		width: 100%;
@@ -178,11 +187,3 @@ header {
 		flex-direction: row;
 	}
 }
-/*------------------------------------------------------------------
---------------------------------------------------------------------
---------------------------------------------------------------------
-							footer
---------------------------------------------------------------------
---------------------------------------------------------------------
---------------------------------------------------------------------
-*/
