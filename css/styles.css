@@ -106,44 +106,56 @@ body {
 header {
 	background: var(--primero);
 	display: flex;
-	height: 5rem;
+	height: 10vh;
 	justify-content: center;
 	align-items: center;
 }
-
-/*
-
-.nav-list__titulo {}
-
-.nav-list__item:hover {}
-*/
-
 .nav-list {
-	position: sticky;
-	top: 0;
-	z-index: 10;
 	height: 10vh;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	transition-duration: 0.25s;
-}
-.nav-list:hover {
 	background-color: var(--tercero);
-}
-.nav-list:hover .nav-list__item {
-	opacity: 1;
+	transition-duration: 0.25s;
 }
 .nav-list__item {
 	height: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: 0;
-	transition: 0.25s;	
+	transition: 0.25s;
 }
 .nav-list__item a{
-	padding: 0 2rem;
+	padding: 0 1rem;
+}
+@media (min-width: 801px) {
+	.nav-list {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		height: 10vh;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		transition-duration: 0.25s;
+	}
+	.nav-list:hover {
+		background-color: var(--tercero);
+	}
+	.nav-list:hover .nav-list__item {
+		opacity: 1;
+	}
+	.nav-list__item {
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: 0.25s;	
+	}
+	.nav-list__item a{
+		padding: 0 2rem;
+	}
 }
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
