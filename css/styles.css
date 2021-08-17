@@ -198,7 +198,7 @@ header {
 	}
 	
 }
-@media (min-width: 550px) {
+@media (min-width: 801) {
 	.tecnology__tecnologia {
 		display: flex;
 		flex-direction: row;
