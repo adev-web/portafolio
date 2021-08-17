@@ -63,8 +63,8 @@ body {
 	box-shadow: 0px 10px 13px -7px #000000,
 		5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
-.boton:hover{
-	transition: 0.30s;
+.boton:hover {
+	transition: 0.3s;
 	background: #7ce7ff;
 	border-radius: 0.5rem;
 }
@@ -77,22 +77,34 @@ body {
 --------------------------------------------------------------------
 */
 .gradiente {
-    background: linear-gradient(270deg, #c9fff1, #6be4ff);
-    background-size: 400% 400%;
+	background: linear-gradient(270deg, #c9fff1, #6be4ff);
+	background-size: 400% 400%;
 
-    -moz-animation: AnimationName 5s ease infinite;
-    animation: AnimationName 5s ease infinite;
+	-moz-animation: AnimationName 5s ease infinite;
+	animation: AnimationName 5s ease infinite;
 }
 
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -125,7 +137,7 @@ header {
 	align-items: center;
 	transition: 0.25s;
 }
-.nav-list__item a{
+.nav-list__item a {
 	padding: 0 1rem;
 }
 @media (min-width: 801px) {
@@ -151,9 +163,9 @@ header {
 		justify-content: center;
 		align-items: center;
 		opacity: 0;
-		transition: 0.25s;	
+		transition: 0.25s;
 	}
-	.nav-list__item a{
+	.nav-list__item a {
 		padding: 0 2rem;
 	}
 }
@@ -165,51 +177,49 @@ header {
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 */
-@media (min-width: 480px) {
-	.tecnology__tecnologia {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-	}
-	.tecnology__tecnologia .tecnologia__titulo {
-		text-transform: uppercase;
-	}
-	.tecnologia {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.tecnologia__icono {
-		width: 10rem;
-		height: 10rem;
-		display: flex;
-		border-radius: 50%;
-		align-items: center;
-		justify-content: center;
-		transition: 0.3s;
-	}
-	.tecnologia__icono:hover {
-		transform: scale(1.25);
-	}
-	.tecnology__tecnologia:nth-child(2)
-		.tecnologia:nth-child(1)
-		.tecnologia__icono {
-		background: var(--html);
-	}
-	.tecnology__tecnologia:nth-child(2)
-		.tecnologia:nth-child(2)
-		.tecnologia__icono {
-		background: var(--css);
-	}
-	.tecnology__tecnologia:nth-child(4)
-		.tecnologia:nth-child(1)
-		.tecnologia__icono {
-		background: var(--javascript);
-	}
-	
+.tecnology__tecnologia {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
+.tecnology__tecnologia .tecnologia__titulo {
+	text-transform: uppercase;
+}
+.tecnologia {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.tecnologia__icono {
+	width: 10rem;
+	height: 10rem;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	transition: 0.3s;
+}
+.tecnologia__icono:hover {
+	transform: scale(1.25);
+}
+.tecnology__tecnologia:nth-child(2)
+	.tecnologia:nth-child(1)
+	.tecnologia__icono {
+	background: var(--html);
+}
+.tecnology__tecnologia:nth-child(2)
+	.tecnologia:nth-child(2)
+	.tecnologia__icono {
+	background: var(--css);
+}
+.tecnology__tecnologia:nth-child(4)
+	.tecnologia:nth-child(1)
+	.tecnologia__icono {
+	background: var(--javascript);
+}
+
 @media (min-width: 801) {
 	.tecnology__tecnologia {
 		display: flex;
