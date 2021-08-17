@@ -3,20 +3,16 @@
 :root {
 	--blanco: #ffffff;
 	--negro: #000000;
-	--primero: #27a8c9;
-	--segundo: #00bfc9;
-	--tercero: #23d3bb;
+	--primero: #0059ff;
+	--segundo: #0084ff;
+	--tercero: #00a2ff;
 	--cuarto: #00987c;
 	--html: #d84823;
-	--css: #1e5ca6;
+	--css: #004292;
 	--javascript: #f58233;
 	--typescript: #1e49a6;
 	--fuenteprimaria: 'Staatliches', cursive;
 	--fuentesecundaria: 'Carter One', cursive;
-}
-
-body {
-	font-family: var(--fuenteprimaria);
 }
 h1,
 h2,
@@ -24,9 +20,11 @@ h3,
 h4 {
 	text-align: center;
 	text-transform: capitalize;
+	font-family: var(--fuenteprimaria);
 }
 h1 {
 	font-size: 3rem;
+	color: var(--blanco);
 }
 h2 {
 	font-size: 2rem;
@@ -34,8 +32,11 @@ h2 {
 h3 {
 	font-size: 1.5rem;
 }
-span {
-	text-transform: lowercase;
+h4 {
+	font-size: 1rem;
+}
+p {
+	font-family: var(--fuentesecundaria);
 }
 a {
 	text-decoration: none;
@@ -45,6 +46,9 @@ a {
 img {
 	width: 90%;
 	border-radius: 2rem;
+}
+body {
+	font-size: 10px;
 }
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -58,6 +62,39 @@ img {
 	box-shadow: 0px 10px 13px -7px #000000,
 		5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
+.boton:hover{
+	background-color: #00987c;
+	transition: 0.1s;
+}
+.boton:hover:active{
+
+}
+/*------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+							animaciones
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+*/
+.gradiente {
+    background: linear-gradient(270deg, #c9fff1, #6be4ff);
+    background-size: 400% 400%;
+
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+}
+
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -66,11 +103,51 @@ img {
 --------------------------------------------------------------------
 --------------------------------------------------------------------
 */
+
 header {
 	background: var(--primero);
 	display: flex;
+	height: 5rem;
 	justify-content: center;
+	align-items: center;
 }
+
+/*
+
+.nav-list__titulo {}
+
+.nav-list__item:hover {}
+*/
+
+.nav-list {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition-duration: 0.25s;
+}
+.nav-list:hover {
+	background-color: var(--tercero);
+}
+.nav-list:hover .nav-list__item {
+	opacity: 1;
+}
+.nav-list__item {
+	background-color: #d84823;
+	height: 3rem;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
+	opacity: 0;
+	transition: 0.25s;	
+}
+.nav-list__item:nth-child(2) 
+.nav-list__item:nth-child(3) 
+.nav-list__item:nth-child(4) 
 
 /*------------------------------------------------------------------
 --------------------------------------------------------------------
@@ -148,42 +225,51 @@ header {
 .proyectos {
 	background-color: var(--segundo);
 	width: 90%;
-	display: flex;
-	flex-direction: column;
 	margin: auto;
 	border-radius: 1rem;
-	padding: 1rem;
+	color: var(--blanco);
+	padding-bottom: 2rem;
 }
 .proyectos__proyecto {
 	width: 90%;
 	display: flex;
 	flex-direction: column;
+	row-gap: 1rem;
 	margin: auto;
 }
 .proyecto {
 	display: flex;
 	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding-bottom: 1rem;
+	border-radius: 1rem;
 }
+.proyecto__titulo {
+	color: var(--blanco);
+	padding: 0;
+	margin: 0;
+}
+
 @media (min-width: 801px) {
 	main {
-		width: 90%;
+		width: 100%;
 		border-radius: 1rem;
-		margin: auto;
 	}
 	.proyectos {
 		background-color: var(--segundo);
 		display: flex;
 		flex-direction: column;
 		border-radius: 1rem;
-		padding: 2rem;
 		transition: 0.35s;
 	}
 	.proyectos:hover {
 		transform: scale(1.05);
 	}
 	.proyectos__proyecto {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
+		width: 90%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 2rem;
+		margin: auto;
 	}
 }
