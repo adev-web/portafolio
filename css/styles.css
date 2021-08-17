@@ -115,12 +115,12 @@ body {
 --------------------------------------------------------------------
 */
 
-header {
+header{
 	background: var(--primero);
 	display: flex;
-	height: 10vh;
 	justify-content: center;
 	align-items: center;
+	height: min-content;
 }
 .nav-list {
 	height: 10vh;
