@@ -242,7 +242,7 @@ header {
 }
 #tecnology
 :nth-child(2)
-:nth-child(3)
+:nth-child(6)
 .tecnologia__icono
 {
 	background: var(--javascript);
@@ -250,19 +250,19 @@ header {
 
 #tecnology
 :nth-child(2)
-:nth-child(4)
+:nth-child(5)
 .tecnologia__icono {
 	background: var(--sql);
 }
 #tecnology
 :nth-child(2)
-:nth-child(5)
+:nth-child(4)
 .tecnologia__icono {
 	background: var(--java);
 }
 #tecnology
 :nth-child(2)
-:nth-child(6)
+:nth-child(3)
 .tecnologia__icono {
 	background: var(--git);
 }
